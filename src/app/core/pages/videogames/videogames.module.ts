@@ -4,14 +4,14 @@ import { CommonModule } from '@angular/common';
 import { VideogamesRoutingModule } from './videogames-routing.module';
 import { VideogamesComponent } from './components/videogames-overview/videogames.component';
 import { SharedModule } from 'src/app/shared/modules/shared.module';
-import { VideogamesIndividualComponent } from './components/videogames-individual/videogames-individual.component';
 import { RouterModule } from '@angular/router';
+import { VideogameDetailsComponent } from './components/videogame-details/videogame-details.component';
 
 
 @NgModule({
   declarations: [
     VideogamesComponent,
-    VideogamesIndividualComponent
+    VideogameDetailsComponent
   ],
   imports: [
     CommonModule,
