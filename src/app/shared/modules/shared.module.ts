@@ -10,7 +10,6 @@ import { CardGameComponent } from '../components/card-game/card-game.component';
 @NgModule({
   declarations: [
     NavSideMenuComponent,
-    DashboardComponent,
     CardComponent,
     CardGameComponent
   ],
@@ -20,7 +19,6 @@ import { CardGameComponent } from '../components/card-game/card-game.component';
   ],
   exports: [
     NavSideMenuComponent,
-    DashboardComponent,
     CardComponent,
     CardGameComponent
   ]
