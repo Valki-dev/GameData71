@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { GameDataList } from '../models/videogames.interface';
+import { VideogameDetail } from '../models/videogame-details.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -19,4 +20,9 @@ export class VideogamesService {
       `${this.baseUrl}/${this.gameDataUrl}/${this.gamesUrl}?style=simple`
     );
   }
+
+  getVideogameById(id: string): Observable<VideogameDetail> {
+    return this.httpClient.get<VideogameDetail>(`${this.baseUrl}/${this.gameDataUrl}/${id}`);
+  }
+
 }

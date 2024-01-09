@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { VideogamesComponent } from './components/videogames-overview/videogames.component';
-import { VideogamesIndividualComponent } from './components/videogames-individual/videogames-individual.component';
+import { VideogameDetailsComponent } from './components/videogame-details/videogame-details.component';
 
 const routes: Routes = [
   { path: '', component: VideogamesComponent },
-  { path: ':id', component: VideogamesIndividualComponent }
+  { path: ':id', component: VideogameDetailsComponent }
 ];
 
 @NgModule({

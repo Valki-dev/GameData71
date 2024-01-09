@@ -1,0 +1,11 @@
+<div class="bg-paletteB h-[100vh] p-5">
+    <div class="game-details-card bg-paletteC flex p-5 rojo">
+        <div class="game-details-image-info azul">
+            <div class="game-details-image">
+                <img *ngIf="videogame?.urlImagen" class="rounded-lg h-[200px] w-[200px]" [src]="videogame.urlImagen" [alt]="videogame.name">
+            </div>
+            <span class="game-details-name">{{videogame.name}}</span>
+            
+        </div>
+    </div>
+</div>
