@@ -8,10 +8,13 @@ import { PrimeNGModule } from './shared/modules/prime-ng.module';
 import { HttpClientModule } from '@angular/common/http';
 import { VideogamesModule } from './core/pages/videogames/videogames.module';
 import { RouterModule } from '@angular/router';
+import { MainComponent } from './core/pages/main/main.component';
+import { MainModule } from './core/pages/main/main.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +22,7 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     PrimeNGModule,
     HttpClientModule,
-    VideogamesModule,
+    MainModule,
     RouterModule
   ],
   providers: [],
