@@ -1,0 +1,11 @@
+{
+  "MAIN": {
+    "VIDEOGAME": {
+      "LIST": {
+        "PLATFORM": "Plataformas",
+        "STATUS": "Estado",
+        "VERSION": "Versión actual"
+      }
+    }
+  }
+}
