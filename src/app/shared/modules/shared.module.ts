@@ -4,14 +4,15 @@ import { NavSideMenuComponent } from 'src/app/core/components/nav-side-menu/nav-
 import { RouterModule } from '@angular/router';
 import { DashboardComponent } from 'src/app/core/pages/dashboard/dashboard.component';
 import { CardComponent } from '../components/card/card.component';
-
+import { CardGameComponent } from '../components/card-game/card-game.component';
 
 
 @NgModule({
   declarations: [
     NavSideMenuComponent,
     DashboardComponent,
-    CardComponent
+    CardComponent,
+    CardGameComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +21,8 @@ import { CardComponent } from '../components/card/card.component';
   exports: [
     NavSideMenuComponent,
     DashboardComponent,
-    CardComponent
+    CardComponent,
+    CardGameComponent
   ]
 })
 export class SharedModule { }

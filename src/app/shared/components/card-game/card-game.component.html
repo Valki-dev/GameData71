@@ -1,9 +1,19 @@
-<div class="card bg-paletteC p-5 rounded-lg flex ">
-    <div>
-        <img [src]="videogame.image" [alt]="videogame.title" class="w-[150px]">
+<div class="card bg-paletteC rounded-lg flex flex-col w-[200px] min-h-[350px]">
+    <div class="game-image p-5">
+        <img *ngIf="videogame.urlImagen !== ''; else noImage" [src]="videogame.urlImagen" [alt]="videogame.name" class="w-[150px] h-[150px]">
+       <ng-template #noImage>
+        <img src="../../../../assets/videogames/noImage.jpeg" [alt]="videogame.name" class="w-[150px]">
+       </ng-template> 
     </div>
-    <div class="ml-5 ">
-        <div class="title text-lg font-medium">{{videogame.name}}</div>
-        <div class="description text-md">{{videogame.description}}</div>
+    <div class="game-info p-3">
+        <div class="game-title text-lg font-medium">{{videogame.name}}</div>
+        <hr>
+        <div class="game-info-list text-md">
+            <ul>
+                <li>Versión actual: {{videogame.versionActual}}</li>
+                <li>Estado: {{videogame.estado}}</li>
+                <li>Plataformas: {{videogame.plataformas}}</li>
+            </ul>
+        </div>
     </div>
 </div>
