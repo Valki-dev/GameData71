@@ -10,8 +10,8 @@ import { VideogameDetail } from '../models/videogame-details.interface';
 })
 export class VideogamesService {
   private baseUrl: string = environment.API_URL;
-  private gameDataUrl: string = 'GameData';
-  private gamesUrl: string = 'games';
+  private gameDataUrl: string = 'gd71/game_data';
+  private gamesUrl: string = 'games'
 
   constructor(private httpClient: HttpClient) {}
 
