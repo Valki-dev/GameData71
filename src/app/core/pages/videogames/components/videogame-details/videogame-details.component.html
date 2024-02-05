@@ -2,7 +2,7 @@
     <div class="game-details-card bg-paletteC flex p-5 rounded-lg">
         <div class="game-details-image-info flex m-3 flex-col items-center p-5 bg-paletteE bg-opacity-60 border border-gray-400">
             <div class="game-image">
-                <img *ngIf="videogame?.urlImagen" class="rounded-lg h-[200px] w-[200px] border border-gray-400" [src]="videogame.urlImagen" [alt]="videogame.name">
+                <img *ngIf="videogame?.urlImagen" class="rounded-lg h-[200px] w-[250px] border border-gray-400" [src]="videogame.urlImagen" [alt]="videogame.name">
             </div>
             <span class="game-name text-xl mt-3">{{videogame.name}}</span>
             <span class="game-version mt-3 font-bold">V{{videogame.versionActual}}</span>
