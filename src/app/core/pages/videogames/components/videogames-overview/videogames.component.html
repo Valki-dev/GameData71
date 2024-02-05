@@ -9,7 +9,7 @@
             <app-spinner></app-spinner>
         </div>
         
-        <div class="overflow-auto pl-5 pt-0 grid grid-cols-1 justify-center md:grid-cols-[repeat(auto-fill,minmax(250px,1fr))]" [ngClass]="allVideogames.length > 0 ? 'h-[90%] max-h-[90%] ' : ''">
+        <div class="overflow-auto pl-5 pt-0 grid grid-cols-1 place-items-center md:justify-center md:grid-cols-[repeat(auto-fill,minmax(250px,300px))]" [ngClass]="allVideogames.length > 0 ? 'h-[90%] max-h-[90%] ' : ''">
             <div class="m-3" *ngFor="let videogame of allVideogames">
                 <a [routerLink]="['/home/videogames', videogame.id]">
                     <app-card-game [videogame]="videogame"></app-card-game>
