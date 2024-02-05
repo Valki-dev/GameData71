@@ -5,3 +5,12 @@
 .azul {
     border: 1px solid blue;
 }
+
+.game-details-image-info {
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.game-name {
+    font-family: 'Press Start 2P', system-ui;
+}

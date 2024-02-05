@@ -1,18 +1,19 @@
 export interface VideogameDetail {
-    id:                   string;
-    name:                 string;
-    versionActual:        string;
-    faseDesarrollo:       string;
-    fechaCreacion:        string;
-    plataformas:          string;
-    descargas:            string;
-    publicado:            string;
-    desarrollo:           string;
-    urlImagen:            string;
-    actualizaciones:      string;
-    estado:               string;
-    cambiosActualizacion: Updates[];
-    usersDiscord:         any[];
+    id:               string;
+    name:             string;
+    descripcion:      null;
+    versionActual:    string;
+    plataformas:      string;
+    urlImagen:        string;
+    estado:           string;
+    faseDesarrollo:   string;
+    fechaCreacion:    string;
+    descargas:        string;
+    publicado:        string;
+    desarrollo:       string;
+    actualizaciones:  Updates[];
+    nactualizaciones: null;
+    njugadores:       null;
 }
 
 export interface Updates {

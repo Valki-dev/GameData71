@@ -6,6 +6,25 @@
         "STATUS": "Estado",
         "VERSION": "Versión actual"
       }
+    },
+    "VIDEOGAME_DETAILS": {
+      "TITLES": {
+        "DESCRIPTION": "Descripción:",
+        "MORE_INFORMATION": "Más información:",
+        "DEVELOPMENT_PHASE": "Fase de desarrollo:",
+        "CREATED_DATE": "Fecha de creación:",
+        "UPDATES_NUMBER": "Nº actualizaciones:",
+        "PLATFORMS": "Plataformas:",
+        "STATUS": "Estado:",
+        "PLAYERS_NUMBER": "Nº jugadores:",
+        "IN_DEVELOPMENT": "Desarrollo:",
+        "PUBLISHED": "Publicado:"
+      },
+      "EMPTY_MESSAGES": {
+        "DESCRIPTION": "Aún no se ha incluido una descripción",
+        "ZERO": "0",
+        "UNDEFINED": "Sin definir"
+      }
     }
   }
 }

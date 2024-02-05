@@ -1,12 +1,80 @@
 <div class="bg-paletteB h-[100vh] p-5">
-    <div class="game-details-card bg-paletteC flex p-5 rojo rounded-lg">
-        <div class="game-details-image-info azul flex flex-col items-center">
+    <div class="game-details-card bg-paletteC flex p-5 rounded-lg">
+        <div class="game-details-image-info flex m-3 flex-col items-center p-5 bg-paletteE bg-opacity-60 border border-gray-400">
             <div class="game-image">
-                <img *ngIf="videogame?.urlImagen" class="rounded-lg h-[200px] w-[200px]" [src]="videogame.urlImagen" [alt]="videogame.name">
+                <img *ngIf="videogame?.urlImagen" class="rounded-lg h-[200px] w-[200px] border border-gray-400" [src]="videogame.urlImagen" [alt]="videogame.name">
             </div>
-            <span class="game-name text-2xl mt-3">{{videogame.name}}</span>
-            <span class="game-version mt-3">V{{videogame.versionActual}}</span>
-            <span class="game-downloads mt-3"> {{videogame.descargas}}</span>
+            <span class="game-name text-xl mt-3">{{videogame.name}}</span>
+            <span class="game-version mt-3 font-bold">V{{videogame.versionActual}}</span>
+            <div class="flex items-center">
+                <img src="../../../../../../assets/icons/download.svg" alt="">
+                <span class="game-downloads mt-3 font-bold">{{videogame.descargas}}</span>
+            </div>
+        </div>
+        <div class="game-details-data-info m-3 w-full">
+            <div class="bg-neutral-400 p-5 flex flex-col rounded-lg w-[full]">
+                <span class="underline underline-offset-8 leading-5 text-lg font-semibold">{{literals.MAIN.VIDEOGAME_DETAILS.TITLES.DESCRIPTION}}</span>
+                <span class="mt-3">{{videogame.descripcion ? videogame.descripcion : literals.MAIN.VIDEOGAME_DETAILS.EMPTY_MESSAGES.DESCRIPTION}}</span>
+            </div>
+            <div class="w-full flex mt-3">
+                <div class="flex flex-col w-[50%] mr-3 py-3 ">
+                    <div class="bg-neutral-400 rounded-lg">
+                        <ul class="flex flex-col py-3">
+                            <span class="underline underline-offset-8 leading-5 px-5 py-3 text-lg font-semibold">{{literals.MAIN.VIDEOGAME_DETAILS.TITLES.MORE_INFORMATION}}</span>
+                            <li class="px-5 mt-3">
+                                <span class="">Estado: <span>{{videogame.estado ? videogame.estado : literals.MAIN.VIDEOGAME_DETAILS.EMPTY_MESSAGES.UNDEFINED}}</span></span>
+                            </li>
+                            <li class="px-5 mt-3">
+                                <span class="">Nº jugadores: <span>{{videogame.njugadores ? videogame.njugadores : literals.MAIN.VIDEOGAME_DETAILS.EMPTY_MESSAGES.ZERO}}</span></span>
+                            </li>
+                            <li class="px-5 mt-3 flex items-center">
+                                <span class="">{{literals.MAIN.VIDEOGAME_DETAILS.TITLES.IN_DEVELOPMENT}}</span>
+                                <ng-container *ngIf="videogame.desarrollo">
+                                    <img src="../../../../../../assets/icons/checkTrue.svg" alt="">
+                                </ng-container>
+                                <ng-container *ngIf="!videogame.desarrollo">
+                                    <img src="../../../../../../assets/icons/checkFalse.svg" alt="">
+                                </ng-container>
+                            </li>
+                            <li class="px-5 mt-3  flex items-center">
+                                <span class="">{{literals.MAIN.VIDEOGAME_DETAILS.TITLES.PUBLISHED}}</span>
+                                <ng-container *ngIf="videogame.desarrollo">
+                                    <img src="../../../../../../assets/icons/checkTrue.svg" alt="">
+                                </ng-container>
+                                <ng-container *ngIf="!videogame.desarrollo">
+                                    <img src="../../../../../../assets/icons/checkFalse.svg" alt="">
+                                </ng-container>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex w-[50%] flex-wrap justify-around items-stretch py-3">
+                    <div class="w-[47%]">
+                        <div class="bg-neutral-400 p-5 flex flex-col rounded-lg">
+                            <span class="underline underline-offset-8 leading-5 text-lg font-semibold">{{literals.MAIN.VIDEOGAME_DETAILS.TITLES.DEVELOPMENT_PHASE}}</span>
+                            <span class="mt-3">{{videogame.faseDesarrollo ? videogame.faseDesarrollo : literals.MAIN.VIDEOGAME_DETAILS.EMPTY_MESSAGES.UNDEFINED}}</span>
+                        </div>
+                    </div>
+                    <div class="w-[47%]">
+                        <div class="bg-neutral-400 p-5 flex flex-col rounded-lg">
+                            <span class="underline underline-offset-8 leading-5 text-lg font-semibold">{{literals.MAIN.VIDEOGAME_DETAILS.TITLES.CREATED_DATE}}</span>
+                            <span class="mt-3">{{videogame.fechaCreacion ? videogame.fechaCreacion : literals.MAIN.VIDEOGAME_DETAILS.EMPTY_MESSAGES.UNDEFINED}}</span>
+                        </div>
+                    </div>
+                    <div class="w-[47%] mt-5">
+                        <div class="bg-neutral-400 p-5 flex flex-col rounded-lg">
+                            <span class="underline underline-offset-8 leading-5 text-lg font-semibold">{{literals.MAIN.VIDEOGAME_DETAILS.TITLES.UPDATES_NUMBER}}</span>
+                            <span class="mt-3">{{videogame.nactualizaciones ? videogame.nactualizaciones : literals.MAIN.VIDEOGAME_DETAILS.EMPTY_MESSAGES.ZERO}}</span>
+                        </div>
+                    </div>
+                    <div class="w-[47%] mt-5">
+                        <div class="bg-neutral-400 p-5 flex flex-col rounded-lg">
+                            <span class="underline underline-offset-8 leading-5 text-lg font-semibold">{{literals.MAIN.VIDEOGAME_DETAILS.TITLES.PLATFORMS}}</span>
+                            <span class="mt-3">{{videogame.plataformas ? videogame.plataformas : literals.MAIN.VIDEOGAME_DETAILS.EMPTY_MESSAGES.UNDEFINED}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
 </div>

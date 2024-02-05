@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { VideogamesService } from '../../services/videogames.service';
 import { ActivatedRoute } from '@angular/router';
 import { VideogameDetail } from '../../models/videogame-details.interface';
+import * as literals from 'src/assets/literals/app_literal.json';
 
 @Component({
   selector: 'app-videogame-details',
@@ -10,9 +11,11 @@ import { VideogameDetail } from '../../models/videogame-details.interface';
 })
 export class VideogameDetailsComponent implements OnInit {
   
+  videogame!: VideogameDetail;
+  literals = literals;
+
   constructor(private route: ActivatedRoute, private videogamesService: VideogamesService) {}
-   videogame!: VideogameDetail;
-  
+
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.getVideogameById(params['id']);
