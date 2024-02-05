@@ -12,4 +12,10 @@ export class CardGameComponent {
   @Input() type: string = '';
   @Input() videogame: any;
   literals = literals;
+
+  handleErrorImage(img: EventTarget | null) {
+    const target = img as HTMLImageElement;
+    target.src = '/assets/videogames/noImage.jpeg';
+    target.alt = 'no image';
+  }
 }

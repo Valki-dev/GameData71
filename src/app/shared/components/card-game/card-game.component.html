@@ -1,14 +1,15 @@
-<div class="card bg-paletteC rounded-lg flex flex-col w-[200px] min-h-[350px]">
-  <div class="game-image p-5">
+<div class="card bg-paletteC rounded-lg flex flex-col w-[275px] min-h-[350px] h-[380px]">
+  <div class="game-image p-5 flex justify-center items-center">
     <img
       *ngIf="videogame.urlImagen !== ''; else noImage"
       [src]="videogame.urlImagen"
       [alt]="videogame.name"
       class="w-[150px] h-[150px]"
+      (error)="handleErrorImage($event.target)"
     />
     <ng-template #noImage>
       <img
-        src="../../../../assets/videogames/noImage.jpeg"
+        src="/assets/videogames/noImage.jpeg"
         [alt]="videogame.name"
         class="w-[150px]"
       />

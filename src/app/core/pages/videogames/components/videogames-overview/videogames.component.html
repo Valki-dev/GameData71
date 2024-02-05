@@ -1,15 +1,15 @@
 <div class="bg-paletteB h-[100vh] max-h-[100vh] rojo">
     <div class="videogames h-full">
         <div class="module_title flex items-center h-[10%] ml-5">
-            <img src="../../../../assets/module-icons/videogames.png" alt="Games-logo" class=" h-[50px] w-[50px]">
-            <h1 class="mx-3 py-10 font-medium text-3xl">Videojuegos</h1>
+            <img src="/assets/module-icons/videogames.png" alt="Games-logo" class=" h-[50px] w-[50px]">
+            <h1 class="mx-3 py-10 font-medium text-xl">Videojuegos</h1>
         </div>
 
-        <div *ngIf="allVideogames.length === 0">
+        <div class="h-[90%]" *ngIf="allVideogames.length === 0">
             <app-spinner></app-spinner>
         </div>
-
-        <div class="videogames_list h-[90%] max-h-[90%] overflow-auto pl-5 pt-0 flex flex-wrap justify-start">
+        
+        <div class="overflow-auto pl-5 pt-0 grid grid-cols-1 place-items-center md:justify-center md:grid-cols-[repeat(auto-fill,minmax(250px,300px))]" [ngClass]="allVideogames.length > 0 ? 'h-[90%] max-h-[90%] ' : ''">
             <div class="m-3" *ngFor="let videogame of allVideogames">
                 <a [routerLink]="['/home/videogames', videogame.id]">
                     <app-card-game [videogame]="videogame"></app-card-game>
